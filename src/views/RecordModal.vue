@@ -84,8 +84,8 @@
       },
       async submitForm() {
         const url = this.isEditing
-          ? `http://localhost:5000/api/records/${this.record._id}`
-          : 'http://localhost:5000/api/records';
+          ? `https://labfront-api.onrender.com/records/${this.record._id}`
+          : 'https://labfront-api.onrender.com/records';
         const method = this.isEditing ? 'PUT' : 'POST';
   
         await fetch(url, {

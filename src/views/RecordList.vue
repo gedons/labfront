@@ -56,7 +56,7 @@
         };
       },
       async fetchRecords() {
-        const res = await fetch('http://localhost:5000/api/records', {
+        const res = await fetch('https://labfront-api.onrender.com/api/records', {
           headers: this.getAuthHeaders(),
         });
         this.records = await res.json();        
@@ -81,7 +81,7 @@
       },
       async deleteRecord(id) {
         confirm("Are you sure you want to delete this record");
-        await fetch(`http://localhost:5000/api/records/${id}`, {
+        await fetch(`https://labfront-api.onrender.com/api/records/${id}`, {
           method: 'DELETE',
           headers: this.getAuthHeaders(),
         });

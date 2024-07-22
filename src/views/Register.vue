@@ -47,7 +47,7 @@ export default {
   methods: {
     async registerLecturer() {
       try {
-        await axios.post('http://localhost:5000/api/lecturer/register', this.form);
+        await axios.post('https://labfront-api.onrender.com/api/lecturer/register', this.form);
         alert('User registered successfully');
         this.$router.push('/login');
       } catch (error) {

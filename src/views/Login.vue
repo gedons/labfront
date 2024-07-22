@@ -47,7 +47,7 @@ export default {
   methods: {
     async loginLecturer() {
       try {
-        const response = await axios.post('http://localhost:5000/api/lecturer/login', this.form);
+        const response = await axios.post('https://labfront-api.onrender.com/api/lecturer/login', this.form);
         localStorage.setItem('token', response.data.token);
         this.$router.push('/dashboard/records');
       } catch (error) {

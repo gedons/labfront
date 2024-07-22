@@ -62,7 +62,7 @@ export default {
     async fetchStudents() {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/remedial/students', {
+        const response = await axios.get('https://labfront-api.onrender.com/api/remedial/students', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -75,7 +75,7 @@ export default {
     async generatePDF(matricNumber) {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:5000/api/remedial/results/pdf?matricNumber=${matricNumber}`, {
+        const response = await axios.get(`https://labfront-api.onrender.com/api/remedial/results/pdf?matricNumber=${matricNumber}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
