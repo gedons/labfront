@@ -51,7 +51,7 @@ export default {
         alert('User registered successfully');
         this.$router.push('/login');
       } catch (error) {
-        alert('Error registering lecturer');
+        alert('Error registering');
         console.error(error);
       }
     },
